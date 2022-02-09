@@ -10,11 +10,12 @@ jobs:
       - name: Build doc
         run: |
           nix-build
-          # cp -r result/public docs
+          mkdir docs
+          cp -r result/public/* docs/
 
       - name: Deploy Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
-          folder: result/public
+          folder: ./docs
 
