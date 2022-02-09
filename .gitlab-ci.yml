@@ -1,0 +1,13 @@
+pages:
+    image: nixos/nix
+    stage: deploy
+    script:
+        # - mkdir public
+        # - cp index.html public/
+        - nix-build
+        - cp -r result/public .
+    artifacts:
+        paths:
+            - public
+
+
