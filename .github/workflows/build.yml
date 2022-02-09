@@ -1,4 +1,4 @@
-name: "parsia actions"
+name: "my actions"
 
 on:
   pull_request:
